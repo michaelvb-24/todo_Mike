@@ -51,8 +51,9 @@ export default function AddTodo({ addTodo }) {
   }
   return (
     <>
-      <div className="d-flex justify-content-center align-items-center mb20">
+      <div className="d-flex justify-content-center align-items-center mb20" data-testid="add-todo-component">
         <input
+        name="addtodo"
           value={value}
           type="text"
           onChange={handleChange}
@@ -60,7 +61,7 @@ export default function AddTodo({ addTodo }) {
           placeholder="Add a todo"
           className="mr20 flex-fill p10"
         />
-        <button onClick={handleClick} className="btn btn-primary">
+        <button name="button" onClick={handleClick} className="btn btn-primary">
           Add
         </button>
       </div>

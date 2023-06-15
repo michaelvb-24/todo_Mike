@@ -3,6 +3,7 @@ import EditTodo from "./EditTodo";
 
 export default function TodoList({ todoList, deleteTodo, updateTodo }) {
   return todoList.length ? (
+    <div data-testid = 'todo-list-component'>
     <ul>
       {todoList.map((t) =>
         t.edit ? (
@@ -17,6 +18,7 @@ export default function TodoList({ todoList, deleteTodo, updateTodo }) {
         )
       )}
     </ul>
+    </div>
   ) : (
     <>
       <p>Aucune todo pour le moment</p>
